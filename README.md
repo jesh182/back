@@ -2,6 +2,15 @@
 
 This repository contains the backend codebase. Follow these steps to run and test the available commands.
 
+## Technologies
+- languaje: Javascript
+- Runtime environment: [NodeJS](https://nodejs.org/)
+- ORM: [Sequelize](https://sequelize.org/)
+- Database: [PostgreSQL](https://www.postgresql.org/)
+- API query: [GraphQL](https://graphql.org/)
+- GraphQL Server: [Apollo-Server](https://www.apollographql.com/docs/apollo-server)
+- Server cache: [Redis](https://redis.io/)
+
 ## Prerequisites
 
 - [Node.js](https://nodejs.org/) installed
