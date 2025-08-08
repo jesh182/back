@@ -3,6 +3,7 @@
 This repository contains the backend codebase. Follow these steps to run and test the available commands.
 
 ## Technologies
+
 - languaje: Javascript
 - Runtime environment: [NodeJS](https://nodejs.org/)
 - ORM: [Sequelize](https://sequelize.org/)
@@ -24,6 +25,18 @@ Install dependencies:
 npm install
 # or
 yarn install
+```
+
+## Environment file
+
+Copy file `.env.example` to `.env`
+
+## Running Sequelize initial db migrations (create tables and initial seeds)
+
+```bash
+npm sequelize:init
+# or
+yarn sequelize:init
 ```
 
 ## Running the Server
@@ -50,6 +63,10 @@ npm test
 # or
 yarn test
 ```
+
+## Disable Cache
+
+Set to false the env `ENABLE_REDIS` variable
 
 ## More Scripts
 

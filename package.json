@@ -5,7 +5,10 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node --watch src/index.js"
+    "start": "node --watch src/index.js",
+    "sequelize:init": "npm sequelize:db:migrate && npm sequelize:db:seed",
+    "sequelize:db:migrate": "cd src/db && npx sequelize-cli db:migrate",
+    "sequelize:db:seed": "cd src/db && npx sequelize-cli db:seed:all"
   },
   "keywords": [],
   "author": "",
@@ -17,6 +20,7 @@
     "graphql": "^16.11.0",
     "pg": "^8.16.3",
     "pg-hstore": "^2.3.4",
+    "redis": "^5.8.0",
     "sequelize": "^6.37.7"
   }
 }
