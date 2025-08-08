@@ -1,0 +1,15 @@
+# Use the official PostgreSQL image as the base image
+FROM postgres:17
+
+# Set environment variables for PostgreSQL
+# These are crucial for setting up the initial database and user
+ENV POSTGRES_DB=database_development
+ENV POSTGRES_USER=postgres
+ENV POSTGRES_PASSWORD=strong_password
+ENV POSTGRES_LISTEN_ADDRESS=0.0.0.0
+
+# Expose the default PostgreSQL port
+EXPOSE 5432
+
+# The official PostgreSQL image's entrypoint handles database initialization
+# and starting the PostgreSQL server, so no CMD is explicitly needed here.
