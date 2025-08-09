@@ -7,15 +7,6 @@ const redisClient = createClient({ url: REDIS_URL }).on('error', (err) => {
 
 redisClient.connect();
 
-// const getCachedData = async (cacheKey) => {
-//   if (redisClient.isOpen) {
-//   redisClient.connect();
-//   console.info('Redis client connected successfully');
-// }
-//   const cachedData = await redisClient.get(cacheKey);
-//   return cachedData ? JSON.parse(cachedData) : null;
-// };
-
 const cacheWrapper = async (cacheKey, fetcher) => {
   if (!ENABLE_REDIS) {
     console.warn('Redis caching is disabled');
